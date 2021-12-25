@@ -28,7 +28,7 @@ function submit() {
 
             } else {
                 alert("welcome  " + user)
-                window.open("myindex.html", "_self");
+                window.open("index.html", "_self");
 
             }
 
