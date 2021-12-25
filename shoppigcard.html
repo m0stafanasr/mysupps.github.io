@@ -41,6 +41,29 @@
     </style>
 </head>
 <body>
+  <div class="bar" id="offersBar">
+    <div id="text"> transform your body with special offers</div>
+    <div class="offerbar"><img src="./media/offer.png" id="offersimg"></div>
+    <div class="offerbar"> <img src="./media/callus.png" id="callimg"></div>
+</div>
+
+
+<div class="mainbar">
+    <div class="container">
+        <a id="logo"><img src="./media/logo.jpg" id="logo"></a>
+        <input type="search" placeholder="search" id="search">
+        <a href="shoppigcard.html"><i class="fas fa-shopping-cart icon"></i></a>
+        <div style="display: inline-block;">
+        <a href="login.html"> <i class="fas fa-user icon" onmouseover="show()"> </i></a>
+        <div id="loginbar" onmouseleave="hide()">
+            welcome!
+            <a href="login.html"><button id="loginbutton" style="display: block;">Login</button></a>
+            <a href="login.html"><button id="logoutbutton" style="display: none;" onclick="logout()">Logout</button></a>
+        </div>
+</div>
+    </div>
+
+</div>
     <div class="container">
   <div class="shopping-cart">
     <h1 style="text-align: center;" >Your Cart</h1>
@@ -57,10 +80,9 @@
 </div>
 
 </div>
-<script>
- 
 
-</script>
+ 
+<script src="myscript.js"></script>
 
 
       <script src="getitems.js" >
