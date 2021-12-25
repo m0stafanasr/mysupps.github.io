@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <title>search</title>
+    
+</head>
+<body onload="search()" onunload="close()">
+    <div class="bar" id="offersBar">
+        <div id="text"> transform your body with special offers</div>
+        <div class="offerbar"><img src="./media/offer.png" id="offersimg"></div>
+        <div class="offerbar"> <img src="./media/callus.png" id="callimg"></div>
+    </div>
+ 
+
+    <div class="mainbar">
+        <div class="container">
+            <a id="logo"><img src="./media/logo.jpg" id="logo"></a>
+            <input type="search" placeholder="search" id="search">
+            <a href="#"><i class="fas fa-shopping-cart icon"></i></a>
+            <div style="display: inline-block;">
+            <a href="login.html"> <i class="fas fa-user icon" onmouseover="show()"> </i></a>
+            <div id="loginbar" onmouseleave="hide()">
+                welcome!
+                <a href="login.html"><button id="loginbutton" style="display: block;">Login</button></a>
+                <a href="login.html"><button id="logoutbutton" style="display: none;" onclick="logout()">Logout</button></a>
+            </div>
+    </div>
+        </div>
+
+    </div>
+    
+    <div  id="stick">
+     <div class="container">
+     <nav class="dropdownmenu">
+          <ul>
+         <li><a href="index.html">Home</a></li>
+        <li><a href="">New Arrivals</a></li>
+         <li><a href="#">Shop products</a>
+            <ul id="submenu">
+               <li><a href="" onclick="showsupp(this)">proteins</a></li>
+               <li><a href="" onclick="showsupp(this)">protein bar</a></li>
+               <li><a href="" onclick="showsupp(this)">pre-workout</a></li>
+               <li > <a href="" onclick="showsupp(this)">creatine</a> </li>
+               <li ><a href="" onclick="showsupp(this)">weight-loss</a> </li>
+               <li> <a href="" onclick="showsupp(this)">vitamins</a> </li>
+            </ul>
+            </li>
+            
+            <li ><a href="#" >Blog</a></li>
+            <li ><a href="#" >About us</a></li>
+            <li ><a href="#" >Legal</a></li>
+            <li ><a href="#" >Contact Us</a></li>
+            <li><a href="#" >Our Stores</a></li>
+        </ul>
+    </nav>
+    </div>  
+    </div> 
+    <div class="articles">
+        <h2>  Products </h2>
+        <div id="boxs" class="container">
+
+        </div>
+    </div>
+   <script src="myscript.js"></script>
+        <script >
+
+
+function display(jsobj,i){
+    var box = document.createElement('div');
+            box.className = "box";
+            var img = document.createElement('img');
+            img.className = "imgproduct";
+            img.src = jsobj[i].image;
+
+            box.appendChild(img);
+            var rate = document.createElement('div');
+            rate.className = "rate";
+
+            for (let j = 0; j < jsobj[i].rating.rate; j++) {
+                var imgrate = document.createElement('img');
+                imgrate.src = "./media/star.png";
+                rate.appendChild(imgrate);
+            }
+            box.appendChild(rate);
+            var info = document.createElement('div');
+            var title = document.createElement('h4');
+            title.innerHTML = jsobj[i].title;
+            info.appendChild(title);
+            var info2 = document.createElement('div');
+            info2.className="info";
+            info2.classList.add("row");
+            var price = document.createElement('span');
+            price.className="col-6";
+            price.innerHTML = jsobj[i].price + "LE";
+            info2.appendChild(price);
+            var Tocard = document.createElement('a');
+            Tocard.className="col-6";
+            Tocard.addEventListener('click',function(){
+                    addtolocalstorag(i);
+            });
+
+            title.addEventListener('click', function(){
+            addlocal(i);
+            window.open("details.html","_self");
+        })
+        img.addEventListener('click', function(){
+            addlocal(i);
+            window.open("details.html","_self");
+        })
+            var icon = document.createElement('i');
+            icon.className = "fas fa-shopping-cart icon";
+            Tocard.appendChild(icon);
+            info2.appendChild(Tocard);
+            info.appendChild(info2)
+            box.appendChild(info);
+            boxs.appendChild(box);
+            function addlocal(index){
+                localStorage.setItem("productID", index )
+            }                           
+        }
+      </script>
+</body>
+</html>

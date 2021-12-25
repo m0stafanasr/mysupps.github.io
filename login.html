@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" href="mystyles.css">
+    <title>Login</title>
+</head>
+<body>
+    <body>
+        <div class="bar" id="offersBar">
+            <div id="text"> transform your body with special offers</div>
+            <div class="offerbar"><img src="./media/offer.png" id="offersimg"></div>
+            <div class="offerbar"> <img src="./media/callus.png" id="callimg"></div>
+        </div>
+    
+    <div class="mainbar">
+        <div class="container">
+        <a id="logo"><img src="./media/logo.jpg" id="logo"></a>
+         <input type="search" placeholder="search" id="search"> 
+      <a href=""> <i class="fas fa-user icon"></i></a>  
+    </div>
+    </div>
+ 
+        <div>
+         <div class="container">
+            <nav class="dropdownmenu">
+                <ul>
+               <li><a href="index.html">Home</a></li>
+              <li><a href="">New Arrivals</a></li>
+              <li><a href="#">Shop products</a>
+                  <ul id="submenu">
+                     <li><a href="" onclick="showsupp(this)">proteins</a></li>
+                     <li><a href="" onclick="showsupp(this)">protein bar</a></li>
+                     <li><a href="" onclick="showsupp(this)">pre-workout</a></li>
+                     <li > <a href="" onclick="showsupp(this)">creatine</a> </li>
+                     <li ><a href="" onclick="showsupp(this)">weight-loss</a> </li>
+                     <li> <a href="" onclick="showsupp(this)">vitamins</a> </li>
+                  </ul>
+                  </li>
+                  
+                  <li ><a href="#" >Blog</a></li>
+                  <li ><a href="#" >About us</a></li>
+                  <li ><a href="#" >Legal</a></li>
+                  <li ><a href="#" >Contact Us</a></li>
+                  <li><a href="#" >Our Stores</a></li>
+              </ul>
+          </nav>
+        </div> 
+    <section>
+        <article id="login">
+            <header id="headname">
+                Login to your Account
+            </header>
+            <div id="newuser">
+                <forms>
+                    <div class="data">
+                    <i class="fas fa-user-circle" id="loginAvatar"></i>
+                </div>
+                <div class="data">
+                    <input type="text" id="username" placeholder="username or Email">
+                </div>
+                <div class="data">
+                    <input type="password" id="password" placeholder="password">
+                </div>
+                <div id="remember">
+                    <p><input type="checkbox" id="check" >Remember me</p>
+                </div>
+                <button  onclick="submit()" id="submit">Login</button>
+                </forms>
+            </div>
+        </article>
+    </section>
+    <script src="myscript.js"></script>
+</body>
+</html>

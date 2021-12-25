@@ -1,0 +1,21 @@
+[
+    {
+        "id":1,
+        "username": "Mostafanasr",
+        "password": "mostafa123",
+        "email": "mostafanasr2020@gmail.com"
+    },
+    {
+        "id":2,
+        "username": "Esraamohamed",
+        "password": "esraa123",
+        "email": "esraa.mohamed.fcis@gmail.com"
+    },
+    {
+        "id":3,
+        "username": "Taqwareda",
+        "password": "taqwa123",
+        "email": "taqwareda3@gmail.com"
+    }
+
+]

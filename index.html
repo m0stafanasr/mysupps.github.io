@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" href="mystyles.css">
+    <title>Home| Mysupps</title>
+</head>
+
+<body  onload="viewSupps()" >
+    <div class="bar" id="offersBar">
+        <div id="text"> transform your body with special offers</div>
+        <div class="offerbar"><img src="./media/offer.png" id="offersimg"></div>
+        <div class="offerbar"> <img src="./media/callus.png" id="callimg"></div>
+    </div>
+
+    <div class="mainbar">
+        <div class="container">
+            <a id="logo"><img src="./media/logo.jpg" id="logo"></a>
+            <input type="search" placeholder="search" id="search">
+            <a href="shoppigcard.html"><i class="fas fa-shopping-cart icon"></i></a>
+            <div style="display: inline-block;">
+                <a href="login.html"> <i class="fas fa-user icon" onmouseover="show()"> </i></a>
+                <div id="loginbar" onmouseleave="hide()">
+                    welcome!
+                    <a href="login.html"><button id="loginbutton" style="display: block;">Login</button></a>
+                    <a href="login.html"><button id="logoutbutton" style="display: none;"
+                            onclick="logout()">Logout</button></a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="stick">
+         <div class="container">
+         <nav class="dropdownmenu" id="mynav">
+              <ul class="navbar" >
+             <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="">New Arrivals</a></li>
+             <li><a href="#">Shop products</a>
+                <ul id="submenu">
+                   <li><a href="" onclick="showsupp(this)">proteins</a></li>
+                   <li><a href="" onclick="showsupp(this)">protein bar</a></li>
+                   <li><a href="" onclick="showsupp(this)">pre-workout</a></li>
+                   <li > <a href="" onclick="showsupp(this)">creatine</a> </li>
+                   <li ><a href="" onclick="showsupp(this)">weight-loss</a> </li>
+                   <li> <a href="" onclick="showsupp(this)">vitamins</a> </li>
+                </ul>
+                </li>
+                <li ><a href="#" >Blog</a></li>
+                <li ><a href="#" >About us</a></li>
+                <li ><a href="#" >Legal</a></li>
+                <li><a href="#" >Our Stores</a></li>
+                <li class="menuicon" onclick="menufunction()"><a ><i class="fas fa-ellipsis-v"></i></a></li>
+            </ul>
+        </nav>
+        </div>  
+        </div> 
+    
+       <div >
+        <div class="container">
+            <div class="row">
+                        <div class="col-6">
+                            <img class="imgads" src="./media/adimg.jpg">
+                        </div>
+                        <div class="col-6">
+                            <img class="imgads" src="./media/adimg2.jpg">
+                        </div>
+           </div>
+           </div>
+           <div class="container">
+         <div  class="row">
+                        <div  class="col-2">
+                           <img class="border" src="./media/organic.png" alt="">
+                        </div>
+                        <div class="col-2">
+                            <img class="border" src="./media/organic2.jfif" alt="">
+                        </div>
+                        <div  class="col-2">
+                            <img class="border" src="./media/organic5.jpg" alt="">
+                         </div>
+                         <div class="col-2">
+                             <img class="border" src="./media/organic4.png" alt="">
+                         </div>
+                         <div class="col-2">
+                            <img class="border" src="./media/organic6.png" alt="">
+                         </div>
+                         <div  class="col-2">
+                             <img class="border" src="./media/organic7.png" alt="">
+                         </div>  
+         </div>
+         </div>
+        </div>
+ </div>
+    <div class="articles">
+        <h2> Most Popular Products </h2>
+        <div id="boxs" class="container" style="padding: 0 20px;">
+
+        </div>
+    </div>
+    <div id="body"></div>
+
+    <div style="padding: 35px;">
+        <a href="#"> <img src="./media/slider4.webp" id="slider"> </a>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <img src="./media/logo.png" id="logofooter">
+                    <p>Musupps® is the major player in the supplements field and we are proud to be the number one
+                        supplement store in Egypt. We are proud that we are the
+                        first supplement provider in Egypt since 2009, many stores all over Egypt & we are growing
+                        daily..</p>
+                </div>
+                <div class="footer-col">
+                    <h2>Quick links</h2>
+                    <ul>
+                        <li><a href="#" title="">About us</a></li>
+                        <li class=""><a href="" title="">Our stores</a></li>
+                        <li class=""><a href="" title="">Terms&conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>CONNECT</h2>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="myscript.js"></script>
+</body>
+
+</html>
